@@ -9,14 +9,28 @@ export function Routes() {
     return (
         <Tab.Navigator
             screenOptions={{
-                headerShown:false
+                headerShown:false,
+                tabBarHideOnKeyboard: true,
+                tabBarShowLabel: false,
+                tabBarActiveBackgroundColor: "#121212",
+
+                tabBarStyle:{
+                    backgroundColor:"#fff",
+                    borderTopWidth:0
+                }
             }}
         >
             
 
 
-            <Tab.Screen name="HomeTab" component={Home} />
-            <Tab.Screen name="Favorites" component={Favorites} />
+            <Tab.Screen 
+                name="HomeTab" 
+                component={Home} 
+            />
+            <Tab.Screen 
+                name="Favorites" 
+                component={Favorites} 
+            />
         </Tab.Navigator>
     )
 }
