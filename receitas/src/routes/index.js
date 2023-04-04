@@ -12,7 +12,7 @@ export function Routes() {
                 headerShown:false,
                 tabBarHideOnKeyboard: true,
                 tabBarShowLabel: false,
-                tabBarActiveBackgroundColor: "#121212",
+                tabBarActiveTintColor: "#121212",
 
                 tabBarStyle:{
                     backgroundColor:"#fff",
@@ -25,7 +25,10 @@ export function Routes() {
 
             <Tab.Screen 
                 name="HomeTab" 
-                component={Home} 
+                component={Home}
+                options={{
+                    
+                }}
             />
             <Tab.Screen 
                 name="Favorites" 
