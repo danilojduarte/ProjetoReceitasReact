@@ -1,17 +1,23 @@
 
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
+
+import { Logo } from '../../components/logo'
 
 export function Home(){
     return (
-    <View style={styles.container}>
-        <Text>Página Home!!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+        <Logo />
+    </SafeAreaView>
     )
 }
 
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: 'red',
+        flex:1,
+        backgroundColor: '#f3f9ff',
+        paddingTop: 36,
+        paddingStart: 14,
+        paddingEnd: 14,
     }
 })
