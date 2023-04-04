@@ -7,7 +7,14 @@ const Tab = createBottomTabNavigator();
 
 export function Routes() {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={{
+                headerShown:false
+            }}
+        >
+            
+
+
             <Tab.Screen name="HomeTab" component={Home} />
             <Tab.Screen name="Favorites" component={Favorites} />
         </Tab.Navigator>
