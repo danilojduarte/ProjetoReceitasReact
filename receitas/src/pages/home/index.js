@@ -1,12 +1,26 @@
 
-import { useState  } from 'react'
+import { useState, useEffect  } from 'react'
 import { View, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity } from 'react-native'
 
 import { Ionicons } from '@expo/vector-icons'
 import { Logo } from '../../components/logo'
 
+import api from '../../services/api'
+
 export function Home(){
     const [inputValue, setInputValue] = useState("")
+
+    useEffect(() => {
+
+
+        async function fetchApi() {
+        const repose = await api.get("/foods")
+        console.log(response.data)
+    }
+
+    fetchApi();
+
+    }, [])
 
     function handleSearch() {
         console.log("Você: ")
